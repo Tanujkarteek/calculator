@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap");
+@property --rotate {
+    syntax: "<angle>";
+    initial-value: 132deg;
+    inherits: false;
+  }
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Josefin Sans', sans-serif;
+}
+body h1{
+    font-size: 35px;
+    font-weight: bold;
+    color: azure;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.flex{
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.calculator{
+    font-size: 26px;
+    text-align: center;
+    background: rgba(216, 216, 216, 0.473);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+
+}
+
+.screen{
+    padding: 21% 0 5%;
+    text-align: right;
+    background-color: white;
+    border-radius: 5px 5px 0 0;
+    background: rgba(216, 216, 216, 0.473);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.screen p{
+  font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: solid;
+    color: #192f94;
+    width: 90%;
+}
+
+.container{
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 auto;
+    background: rgba(216, 216, 216, 0.473);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.keypad{
+    font-size: 0;
+    background-color: white;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px dashed black;
+    background: rgba(216, 216, 216, 0.473);
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 7.5px );
+-webkit-backdrop-filter: blur( 7.5px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+button{
+    width: 140px;
+    height: 50px;
+    border: none;
+    background: none;
+    font-size: 22px;
+    padding: 6.7% 0 8.7%;
+}
+
+button:hover{
+    background-color: rgba(108, 138, 238, 0.3);
+}
+
+@media(max-width: 992px) 
+{
+    h1{
+        margin: 5% auto;
+    }
+
+    .calculator
+    {
+        width: 380px;
+    }
+
+    button
+    {
+        font-size: 17px;
+    }
+
+}
+  
+  :root {
+    --card-height: 541px;
+    --card-width: 500px;
+  }
+  
+  
+  body {
+    min-height: 100vh;
+    background-image: url("https://c4.wallpaperflare.com/wallpaper/707/220/899/gradient-blue-pink-abstract-art-wallpaper-preview.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    box-sizing: border-box;
+  }
+  
+  
+  .card {
+    background: #191c29;
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    font-size: 1.5em;
+    color: rgb(88 199 250 / 0%);
+    cursor: pointer;
+  }
+  
+  .card:hover {
+    color: rgb(88 199 250 / 100%);
+    transition: color 1s;
+  }
+  
+  .card::before {
+    content: "";
+    width: 104%;
+    height: 106%;
+    border-radius: 8px;
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      position: absolute;
+      z-index: -1;
+      top: -3%;
+      left: -2%;
+      animation: spin 2.5s linear infinite;
+  }
+  
+  .card::after {
+    position: absolute;
+    content: "";
+    top: calc(var(--card-height) / 6);
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    margin: 0 auto;
+    transform: scale(0.8);
+    filter: blur(calc(var(--card-height) / 6));
+    background-image: linear-gradient(
+      var(--rotate)
+      , #5ddcff, #3c67e3 43%, #4e00c2);
+      opacity: 1;
+    transition: opacity .5s;
+    animation: spin 2.5s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      --rotate: 0deg;
+    }
+    100% {
+      --rotate: 360deg;
+    }
+  }
+  
+  a {
+    color: #212534;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: bold;
+    margin-top: 2rem;
+  }
